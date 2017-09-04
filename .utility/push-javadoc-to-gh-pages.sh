@@ -2,7 +2,7 @@
 
 if [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ "$TRAVIS_BRANCH" ]; then
 
-  git config --global user.email "wps@us.ibm.com"
+  git config --global user.email "gattana@us.ibm.com"
   git config --global user.name "Watson Github Bot"
   git clone --quiet --branch=gh-pages https://${GITHUB_TOKEN_DOCS}@github.com/watson-developer-cloud/java-sdk gh-pages > /dev/null
 
@@ -14,7 +14,7 @@ if [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ "$TRAVIS_BRANCH" ]; then
     cp -rf ../build/docs/all/* docs/$TRAVIS_BRANCH
     ../.utility/generate_index_html.sh > index.html
 
-	# update the latest/ symlink
+	  # update the latest/ symlink
     # on tagged builds, $TRAVIS_TAG is set to the tag, but it's blank on regular builds, unlike $TRAVIS_BRANCH
     if [ $TRAVIS_TAG ]; then
       rm latest
