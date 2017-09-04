@@ -46,6 +46,7 @@ deploy:
     skip_cleanup: true
     on:
       repo: watson-developer-cloud/java-sdk
+      all_branches: true
       jdk: oraclejdk7
 
   - provider: script
